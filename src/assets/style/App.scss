@@ -1,0 +1,36 @@
+@import "./Class.scss";
+
+#app {
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // text-align: center;
+  color: #2c3e50;
+  user-select: none;
+  word-wrap: break-word;
+  word-break: break-all;
+  box-sizing: border-box;
+  padding: 20px;
+
+  #nav {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+
+    a {
+      font-weight: bold;
+      color: #2c3e50;
+
+      &.router-link-exact-active {
+        color: #42b983;
+      }
+    }
+  }
+
+
+  .box-card {
+    width: 450px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+}
