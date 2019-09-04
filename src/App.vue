@@ -1,30 +1,13 @@
 <template>
   <div id="app">
-    <H1>Vue - box</H1>
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/test">Test</router-link>
+      <router-link to="/">部署合约</router-link> |
+      <router-link to="/upload">信息上报</router-link> |
+      <router-link to="/search">信息查询</router-link> |
+      <router-link to="/test">测试Demo</router-link>
     </div>
     <router-view/>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  color: #2c3e50;
-  padding: 30px;
-}
-
-#nav {
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-
-</style>
+<style lang="scss" src="./assets/style/App.scss"></style>

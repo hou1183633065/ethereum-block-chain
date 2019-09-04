@@ -1,5 +1,6 @@
 <template>
-  <div class="home">
+  <div class="home flex row center">
+    <el-button @click="submitContract">部署合约</el-button>
   </div>
 </template>
 
@@ -7,8 +8,21 @@
 // @ is an alias to /src
 
 export default {
-  name: 'home',
-  components: {
-  }
-}
+  methods: {
+    submitContract() {
+      this.$alarmUpload
+        .createContract({
+          from: this.$alarmUpload.defaultAccount,
+          data: this.$alarmUpload.getContracts("bytecode")
+        })
+        .then(result => {
+          console.log(result);
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    }
+  },
+};
 </script>
+
