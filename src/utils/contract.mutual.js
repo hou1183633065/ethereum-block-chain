@@ -1,13 +1,13 @@
 
 import getWeb3 from "@/utils/getWeb3";
 
-import SimpleStorageContract from "@/static/contracts/SimpleContract.json";
 
 import { default_account } from "@/utils/config";
 
 
 class ContractMutual {
-  constructor() {
+  constructor(constractJson) {
+    this.constractJson = constractJson
     new getWeb3().then((web3) => {
       this.web3 = web3
 
@@ -28,7 +28,7 @@ class ContractMutual {
     });
   }
   getContracts(keyName) {
-    return SimpleStorageContract[keyName]
+    return this.constractJson[keyName]
   }
   setDefaultAccount(account) {
     this.web3.eth.defaultAccount = account || this.web3.eth.coinbase;
